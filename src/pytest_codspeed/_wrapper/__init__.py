@@ -18,6 +18,7 @@ def _get_ffi():
         "dist_callgrind_wrapper",
         '#include "wrapper.h"',
         sources=["wrapper.c"],
+        include_dirs=['/usr/include/python3.10']
     )
     return ffi
 
