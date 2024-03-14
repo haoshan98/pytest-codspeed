@@ -8,11 +8,12 @@ on:
 
 jobs:
   benchmarks:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.12
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: "3.12.0-beta.3"
       - name: Install local version of pytest-codspeed
